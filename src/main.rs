@@ -1,6 +1,3 @@
-// TODO: remove this when you're done with your implementation.
-#![allow(unused_variables, dead_code)]
-
 struct Library {
     books: Vec<Book>,
 }
@@ -39,7 +36,7 @@ impl Library {
         self.books.is_empty()
     }
 
-    fn add_book(&mut self, book:Book) {
+    fn add_book(&mut self, book: Book) {
         self.books.push(book);
     }
 
@@ -50,10 +47,9 @@ impl Library {
     }
 
     fn oldest_book(&self) -> Option<&Book> {
-       self.books.iter().min_by_key(|book| book.year)
+        self.books.iter().min_by_key(|book| book.year)
     }
 }
-
 
 fn main() {
     let mut library = Library::new();
